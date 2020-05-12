@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--imageViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageViewController" title="imageViewController" id="BYZ-38-t0r" customClass="ImageViewController" customModule="MIMIApp1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yao-2n-LTN">
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" id="ko7-a3-AxY">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="GfG-GP-5e5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-fU-lm5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yao-2n-LTN" firstAttribute="trailing" secondItem="vaT-fU-lm5" secondAttribute="trailing" id="3r3-bf-zz7"/>
+                            <constraint firstItem="vaT-fU-lm5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cwl-CZ-z4N"/>
+                            <constraint firstItem="yao-2n-LTN" firstAttribute="top" secondItem="vaT-fU-lm5" secondAttribute="bottom" id="Qt7-dm-Dev"/>
+                            <constraint firstItem="yao-2n-LTN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fCh-Lq-64f"/>
+                            <constraint firstItem="vaT-fU-lm5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fgc-wN-ZUK"/>
+                            <constraint firstItem="yao-2n-LTN" firstAttribute="leading" secondItem="vaT-fU-lm5" secondAttribute="leading" id="pkz-Kg-fHE"/>
+                            <constraint firstItem="yao-2n-LTN" firstAttribute="top" secondItem="vaT-fU-lm5" secondAttribute="bottom" id="vzx-zq-0hn"/>
+                            <constraint firstItem="vaT-fU-lm5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yku-gU-loe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageViewMeme" destination="vaT-fU-lm5" id="bCx-yy-LOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>
